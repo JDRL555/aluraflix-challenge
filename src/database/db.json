@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "frontend"
+    },
+    {
+      "id": 2,
+      "name": "backend"
+    },
+    {
+      "id": 3,
+      "name": "innovación y gestión"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "cover_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAegA_q67yopKMq9eK-WKdU0dRxOg",
+      "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY?si=H3qnmguNHigfX9PF",
+      "banner_url": "https://www.aluracursos.com/blog/assets/glosario/portada-glosario.png",
+      "categoryId": 2,
+      "created_at": "12/07/2024"
+    },
+    {
+      "id": 2,
+      "cover_url": "https://i.ytimg.com/vi/9xlea2yDFaY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQ5ETL1P1sUwoARrk-2wuqXEkL_g",
+      "video_url": "https://www.youtube.com/embed/9xlea2yDFaY",
+      "banner_url": "https://www.aluracursos.com/blog/assets/react-hooks/img2.png",
+      "categoryId": 1,
+      "created_at": "10/07/2024"
+    },
+    {
+      "cover_url": "https://i.ytimg.com/vi/Y_6R3XTA2go/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpqG6NJdYHQEyYWzpvYhSwyNLtWQ",
+      "video_url": "https://www.youtube.com/embed/Y_6R3XTA2go?si=2rDx8tSs_gWz8_d1",
+      "banner_url": "https://www.brasilcode.com.br/wp-content/uploads/2024/02/figma.jpg",
+      "categoryId": 1,
+      "created_at": "10/07/2024",
+      "id": 3
+    }
+  ]
+}

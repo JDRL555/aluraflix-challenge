@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useReducer } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+import { AppContext } from './context/AppContext'
+import { initialState, reducer } from './reducer/AppReducer'
+
+import Layout from './layouts/Layout/Index'
+
+import HomePage from './pages/HomePage/Index'
+import CreatePage from './pages/CreatePage/Index'
+import VideoPage from './pages/VideoPage/Index'
+
+export default function App() {
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <AppContext.Provider value={{ state, dispatch }}>
+      <BrowserRouter>
+        <Routes>
+          <Route  
+            path='/'
+            element={
+              <Layout>
+                <HomePage /> 
+              </Layout> 
+            }
+          />
+          <Route  
+            path='/videos/new'
+            element={
+              <Layout>
+                <CreatePage /> 
+              </Layout> 
+            }
+          />
+          <Route  
+            path='/video/:id'
+            element={
+              <Layout>
+                <VideoPage /> 
+              </Layout> 
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </AppContext.Provider>
   )
 }
-
-export default App
