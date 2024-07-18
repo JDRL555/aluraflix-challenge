@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-
 import logo from '../../../public/imgs/logo.png'
 
 import styles from './Index.module.css'
+
+import NavbarList from './components/NavbarList/Index'
 
 export default function Index() {
   return (
@@ -10,14 +10,7 @@ export default function Index() {
       <div>
         <img src={logo} alt="" />
       </div>
-      <div>
-        <Link to={"/"} className={styles.link}>
-          Home
-        </Link>
-        <Link to={"/videos/new"} className={styles.link}>
-          Crear video
-        </Link>
-      </div>
+      <NavbarList />
     </nav>
   )
 }

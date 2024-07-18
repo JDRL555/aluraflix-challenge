@@ -1,6 +1,8 @@
 :root {
 
   --primary-color: #2271D1;
+  --dark-primary-color: #113c70;
+  --opaque-dark-primary-color: #113c70c0;
   --secondary-color: #262626;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

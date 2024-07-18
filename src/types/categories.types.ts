@@ -1,4 +1,7 @@
+import { CSSProperties } from 'react'
+
 export interface Category {
   id: number,
-  name: string
+  name: string,
+  color: CSSProperties["color"]
 }
