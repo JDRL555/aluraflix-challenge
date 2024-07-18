@@ -9,16 +9,29 @@ import {
 
 import { 
   APIContextProps, 
-  Entities, Endpoint
+  Entities, Endpoint, QueryParams
 } from '../types/api.types'
+
+import { toQueryParams } from '../utils/params'
 
 export class API<T extends Entities> implements APIContextProps<T> {
   data: T[] = []
   
 
-  async get(endpoint: Endpoint): Promise<GetResponseAPI<T>> {
-    const response = await fetch(`${API_URI}/${endpoint}`)
+  async get(
+    endpoint: Endpoint, 
+    query_params: QueryParams | null = null
+  ): Promise<GetResponseAPI<T>> {
+    let querys = ""
+    let url = `${API_URI}/${endpoint}`
+
+    if(query_params) {
+      querys = toQueryParams(query_params)
+      url += `?${querys}`
+    }
+    const response = await fetch(url)
     const data = await response.json()
+    
 
     return { data }
   }
