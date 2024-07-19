@@ -1,19 +1,17 @@
-import { Category } from '../../types/categories.types'
 import { Video } from '../../types/videos.types'
 import styles from "./Index.module.css"
 
 interface props {
-  category: Category,
   video: Video
 }
 
-export default function Index({ category, video }: props) {
+export default function Index({ video }: props) {
   return (
     <header className={styles.header} style={{ backgroundImage: `url("${video.banner_url}")` }}>
       <section className={styles.gradient}>
         <div className={styles.cover_details}>
-          <h1 style={{ backgroundColor: category.color }}>
-            {category.name}
+          <h1 style={{ backgroundColor: video.category.color }}>
+            {video.category.name}
           </h1>
           <h2>{video.title}</h2>
           <p>{video.description}</p>
@@ -27,7 +25,7 @@ export default function Index({ category, video }: props) {
           <div
             className={styles.cover_shadow}
             style={{ 
-              boxShadow: `inset ${category.color} 3px 3px 10px 0, inset ${category.color} -3px -3px 10px 0` 
+              boxShadow: `inset ${video.category.color} 3px 3px 10px 0, inset ${video.category.color} -3px -3px 10px 0` 
             }}
           ></div>
         </div>

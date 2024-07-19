@@ -8,7 +8,7 @@ export interface Video {
   video_url: URL,
   banner_url: URL,
   categoryId: number,
-  category?: Category,
+  category: Category,
   created_at: string
 }
 

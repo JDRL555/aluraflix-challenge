@@ -1,0 +1,18 @@
+.videos_container {
+  margin-top: 20px;
+}
+
+.videos_list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 30px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  width: 150px;
+}
