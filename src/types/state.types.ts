@@ -15,11 +15,11 @@ export interface State {
 export interface Action {
   type: ActionTypes,
   data?: any,
-  id: number,
+  id?: number,
   error?: string
 }
 
 export interface AppContextValue {
-  state?: State,
-  dispatch?: Dispatch<Action>
+  state: State,
+  dispatch: Dispatch<Action>
 }

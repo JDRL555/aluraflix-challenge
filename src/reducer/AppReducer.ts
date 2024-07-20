@@ -28,11 +28,14 @@ const reducer = (state: State, action: Action): State  => {
         videos: [ 
           ...state.videos, {
             id: state.videos.length + 1,
+            title: action.data.title,
+            description: action.data.description,
             cover_url: action.data.cover_url,
             video_url: action.data.video_url,
             banner_url: action.data.banner_url,
             created_at: action.data.created_at,
-            categoryId: action.data.categoryId
+            categoryId: action.data.categoryId,
+            category: action.data.category,
           }
         ]
       }
@@ -44,7 +47,8 @@ const reducer = (state: State, action: Action): State  => {
         categories: [
           ...state.categories, {
             id: state.categories.length + 1,
-            name: action.data.name
+            name: action.data.name,
+            color: action.data.color,
           }
         ]
       }

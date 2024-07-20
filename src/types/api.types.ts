@@ -10,7 +10,15 @@ import {
 
 export type Entities = Video | Category
 
-export type Endpoint = "videos" | "categories"
+export interface Endpoint {
+  name: "videos" | "categories",
+  relation?: {
+    with: "videos" | "category",
+    type: "embed" | "expand"
+  }
+}
+
+export type Endpoints = "videos" | "categories"
 
 export interface QueryParams {
   videos: {
@@ -25,8 +33,8 @@ export interface QueryParams {
 
 export interface APIContextProps<T> {
   data: T[],
-  get: (endpoint: Endpoint, query_params: QueryParams | null) => Promise<GetResponseAPI<T>>,
-  post: (endpoint: Endpoint, entity: T) => Promise<PostResponseAPI<T>>,
-  patch: (endpoint: Endpoint, entityId: number) => Promise<PatchResponseAPI<T>>,
-  delete: (endpoint: Endpoint, entityId: number) => Promise<DeleteResponse>,
+  get: (endpoint: Endpoints, query_params: QueryParams | null) => Promise<GetResponseAPI<T>>,
+  post: (endpoint: Endpoints, entity: T) => Promise<PostResponseAPI<T>>,
+  patch: (endpoint: Endpoints, entityId: number) => Promise<PatchResponseAPI<T>>,
+  delete: (endpoint: Endpoints, entityId: number) => Promise<DeleteResponse>,
 }

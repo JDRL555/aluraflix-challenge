@@ -11,9 +11,3 @@ export interface Video {
   category: Category,
   created_at: string
 }
-
-export interface VideosAction {
-  type: "GET" | "POST" | "UPDATE" | "DELETE",
-  video: Video,
-  videoId: number
-}
