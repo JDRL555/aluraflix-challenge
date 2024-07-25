@@ -1,0 +1,40 @@
+.input_container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.label {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.input, .select, .textarea {
+  border: 1px solid rgba(128, 128, 128, 0.432);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  outline: none;
+  font-size: 17px;
+}
+
+.select {
+  color: rgb(180, 180, 180);
+}
+
+.input::placeholder, .select::placeholder, .textarea::placeholder {
+  color: rgb(180, 180, 180);
+}
+
+.textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+.input_incorrect {
+  border: 1px solid var(--error);
+}
+
+.label_incorrect, .input_incorrect::placeholder {
+  color: var(--error);
+}

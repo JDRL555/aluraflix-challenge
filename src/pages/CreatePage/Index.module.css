@@ -1,0 +1,32 @@
+.main_new_video {
+  margin: 0 40px;
+}
+
+.main_new_video h1, .main_new_video p {
+  text-align: center;
+}
+
+.main_new_video h1 {
+  margin-bottom: 0;
+}
+
+.main_new_video p {
+  font-size: 20px;
+}
+
+.main_new_video hr {
+  opacity: .3;
+}
+
+.btn {
+  margin-top: 30px;
+  margin-right: 20px;
+  padding: 10px;
+  width: 150px;
+  font-size: 18px;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  border: 2px solid var(--primary-color);
+}

@@ -1,0 +1,11 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.795);
+  padding: 40px 0;
+  box-shadow: 1px 0 20px var(--primary-color);
+  margin-top: 40px;
+}
+
+.footer img {
+  display: block;
+  margin: auto;
+}
